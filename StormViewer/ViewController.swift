@@ -7,13 +7,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UITableViewController {
+    
+    
+    var picturesURLs = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        fetchImages()
     }
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return picturesURLs.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Picture", for: indexPath)
+        
+        cell.textLabel?.text = picturesURLs[indexPath.row]
+        
+        return cell
+    }
+    
+    func fetchImages(){
+        let fileManager = FileManager.default
+        let path = Bundle.main.resourcePath!
+        
+        let items = try! fileManager.contentsOfDirectory(atPath: path)
+        
+        for item in items{
+            if item.hasPrefix("nssl"){
+                picturesURLs.append(item)
+            }
+        }
+        
+        print(picturesURLs)
+    }
 
 }
 
