@@ -16,6 +16,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Table View of Contents"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         fetchImages()
     }
     

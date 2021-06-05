@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Picture" textLabel="Au7-MG-OuH" style="IBUITableViewCellStyleDefault" id="H5W-va-KQa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Picture" textLabel="Au7-MG-OuH" style="IBUITableViewCellStyleDefault" id="H5W-va-KQa">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H5W-va-KQa" id="BZd-x6-2mb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Au7-MG-OuH">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="356.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -72,17 +72,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RfU-Ya-Y2j">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RfU-Ya-Y2j">
+                                <rect key="frame" x="0.0" y="0.0" width="421" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1SW-Ra-Ec4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="centerY" secondItem="2hO-5L-hvx" secondAttribute="centerY" id="BdW-QS-wgC"/>
-                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="top" secondItem="2hO-5L-hvx" secondAttribute="topMargin" constant="-44" id="JWD-uP-3f9"/>
-                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="leading" secondItem="1SW-Ra-Ec4" secondAttribute="leading" id="Ta8-gJ-Smv"/>
-                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="centerX" secondItem="2hO-5L-hvx" secondAttribute="centerX" id="Yza-nv-j8V"/>
+                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="leading" secondItem="1SW-Ra-Ec4" secondAttribute="leading" id="3qw-RJ-5rU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RfU-Ya-Y2j" secondAttribute="trailing" constant="-27" id="ZOr-Cr-hTh"/>
+                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="top" secondItem="2hO-5L-hvx" secondAttribute="topMargin" constant="-44" id="sMd-hr-iFQ"/>
+                            <constraint firstItem="RfU-Ya-Y2j" firstAttribute="centerY" secondItem="2hO-5L-hvx" secondAttribute="centerY" id="txN-rx-GmQ"/>
                         </constraints>
                     </view>
                     <connections>
