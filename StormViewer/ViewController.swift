@@ -31,6 +31,13 @@ class ViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let detailViewController = storyboard?.instantiateViewController(identifier: "Detail") as? DetailViewController{
+            detailViewController.selectedImage = picturesURLs[indexPath.row]
+            navigationController?.pushViewController(detailViewController, animated: true)
+        }
+    }
+    
     func fetchImages(){
         let fileManager = FileManager.default
         let path = Bundle.main.resourcePath!
