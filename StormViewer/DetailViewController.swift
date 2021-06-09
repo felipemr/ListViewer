@@ -22,6 +22,8 @@ class DetailViewController: UIViewController {
         title = "\(rowNumber) of \(totalRows)"
         navigationItem.largeTitleDisplayMode = .never
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareTapped))
+        
         if let imageToLoad = selectedImage {
             imageView.image = UIImage(named: imageToLoad)
         }
@@ -38,14 +40,15 @@ class DetailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func shareTapped(){
+        guard let imageData = imageView.image?.jpegData(compressionQuality: 1.0) else {
+            print("No Image found!")
+            return
+        }
+        
+        let activityController = UIActivityViewController(activityItems: [imageData], applicationActivities: [])
+        activityController.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem // makes it work on ipad
+        present(activityController, animated: true)
     }
-    */
 
 }
